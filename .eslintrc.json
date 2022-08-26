@@ -3,6 +3,10 @@
   "ignorePatterns": [
     "projects/**/*"
   ],
+  "env": {
+    "jest": true,
+    "browser": true
+  },
   "overrides": [
     {
       "files": [
@@ -15,6 +19,7 @@
         "createDefaultProgram": true
       },
       "extends": [
+        "eslint:recommended",
         "plugin:@angular-eslint/recommended",
         "plugin:prettier/recommended"
      ],
