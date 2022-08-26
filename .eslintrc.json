@@ -55,6 +55,10 @@
         "plugin:@angular-eslint/template/recommended"
       ],
       "rules": {}
+    },
+    {
+      "files": ["*.spec.ts"],
+      "extends": ["plugin:testing-library/angular"]
     }
   ]
 }
