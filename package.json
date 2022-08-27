@@ -32,6 +32,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^14.0.1",
     "@angular-devkit/build-angular": "^14.2.0",
     "@angular-eslint/builder": "14.0.3",
     "@angular-eslint/eslint-plugin": "14.0.3",
@@ -42,6 +43,7 @@
     "@angular/compiler-cli": "^14.0.0-next.0",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@fullhuman/postcss-purgecss": "^4.1.3",
     "@testing-library/angular": "^12.1.2",
     "@types/jest": "^28.1.8",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
@@ -56,7 +58,10 @@
     "jest": "^28.1.3",
     "jest-preset-angular": "^12.2.0",
     "lint-staged": "^13.0.3",
+    "postcss": "^8.4.16",
+    "postcss-loader": "^7.0.1",
     "prettier": "^2.7.1",
+    "sass-loader": "^13.0.2",
     "typescript": "~4.7.2"
   }
 }
