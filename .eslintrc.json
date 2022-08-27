@@ -18,15 +18,64 @@
         ],
         "createDefaultProgram": true
       },
+      "plugins": ["@typescript-eslint", "boundaries"],
       "parser": "@typescript-eslint/parser",
       "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:boundaries/strict",
         "plugin:@angular-eslint/recommended",
         "plugin:prettier/recommended"
-     ],
+      ],
+      "settings": {
+        "import/resolver": {
+          "typescript": {
+            "alwaysTryTypes": true
+          }
+        },
+        "boundaries/include": ["src/app/**/*.ts"],
+        "boundaries/elements": [
+          {
+            "type": "core",
+            "pattern": "core",
+            "mode": "folder"
+          },
+          {
+            "type": "features",
+            "pattern": "features",
+            "mode": "folder"
+          },
+          {
+            "type": "pages",
+            "pattern": "pages",
+            "mode": "folder"
+          },
+          {
+            "type": "app",
+            "pattern": "app/*",
+            "mode": "file"
+          }
+        ]
+      },
       "rules": {
+        "boundaries/element-types": [2, {
+          "default": "disallow",
+          "rules": [
+            {
+              "from": "features",
+              "allow": ["core"]
+            },
+            {
+              "from": "pages",
+              "allow": ["features", "core"]
+            },
+            {
+              "from": "app",
+              "allow": ["app", "pages", "features", "core"]
+            }
+          ]
+        }],
         "@typescript-eslint/no-explicit-any": [
           "error"
         ],
