@@ -1,27 +1,11 @@
 /* eslint-env es6 */
-const purgecss = require('@fullhuman/postcss-purgecss')
+const glob = require('glob')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 
 module.exports = {
-    module: {
-      rules: [
-        {
-          test: /\.scss$/i,
-          use: [
-            "sass-loader",
-            {
-              loader: "postcss-loader",
-              options: {
-                postcssOptions: {
-                  plugins: [
-                    purgecss({
-                        content: ['./src/**/*.html'],
-                      })
-                  ],
-                },
-              },
-            },
-          ],
-        },
-      ],
-    },
+    plugins: [
+      new PurgecssPlugin({
+        paths: glob.sync(`src/**/*`,  { nodir: true }),
+      }),
+    ]
   };

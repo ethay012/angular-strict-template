@@ -19,10 +19,7 @@
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
-              "path": "./extra-webpack.config.js",
-              "mergeRules": {
-                "externals": "replace"
-              }
+              "path": "./extra-webpack.config.js"
             },
             "outputPath": "dist/angular-strict-template",
             "index": "src/index.html",
