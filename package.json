@@ -44,6 +44,7 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@testing-library/angular": "^12.1.2",
+    "@types/glob": "^8.0.0",
     "@types/jest": "^28.1.8",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",

@@ -19,7 +19,7 @@
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
-              "path": "./extra-webpack.config.js"
+              "path": "./extra-webpack.config.ts"
             },
             "outputPath": "dist/angular-strict-template",
             "index": "src/index.html",
