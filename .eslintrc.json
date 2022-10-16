@@ -108,7 +108,8 @@
     },
     {
       "files": ["*.spec.ts"],
-      "extends": ["plugin:testing-library/angular"]
+      "plugins": ["jest-dom"],
+      "extends": ["plugin:testing-library/angular", "plugin:jest-dom/recommended"]
     }
   ]
 }

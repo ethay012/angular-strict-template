@@ -5,6 +5,6 @@ describe('AppComponent', () => {
   test('displays a welcome message', async () => {
     await render(AppComponent);
     const welcome = screen.getByText('Welcome');
-    expect(welcome).toBeTruthy();
+    expect(welcome).toBeInTheDocument();
   });
 });
