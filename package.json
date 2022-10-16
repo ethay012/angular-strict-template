@@ -46,6 +46,7 @@
     "@angular/compiler-cli": "^14.2.6",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@ngneat/aim": "^2.0.0",
     "@testing-library/angular": "^12.1.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@types/glob": "^8.0.0",
