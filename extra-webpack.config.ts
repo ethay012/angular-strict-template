@@ -1,6 +1,6 @@
 import { sync } from 'glob';
 import { readFileSync } from 'fs';
-import PurgecssPlugin from 'purgecss-webpack-plugin';
+import { PurgeCSSPlugin } from 'purgecss-webpack-plugin';
 
 import { Configuration } from 'webpack';
 
@@ -39,7 +39,7 @@ function getImportedPrimeNgModuleNames(): string[] {
 
 export default {
   plugins: [
-    new PurgecssPlugin({
+    new PurgeCSSPlugin({
       paths: () => {
         const importedPrimeNgModuleNames = getImportedPrimeNgModuleNames();
 
@@ -57,6 +57,8 @@ export default {
           })
         );
       },
+      safelist: [],
+      blocklist: [],
       keyframes: true,
       fontFace: true
     })
