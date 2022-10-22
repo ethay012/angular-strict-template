@@ -109,7 +109,11 @@
     {
       "files": ["*.spec.ts"],
       "plugins": ["jest-dom"],
-      "extends": ["plugin:testing-library/angular", "plugin:jest-dom/recommended"]
+      "extends": ["plugin:testing-library/angular", "plugin:jest-dom/recommended"],
+      "rules": {
+        "testing-library/no-node-access": "off",
+        "@typescript-eslint/no-non-null-assertion": "off"
+      }
     }
   ]
 }
