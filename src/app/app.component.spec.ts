@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/angular';
 import { AppComponent } from './app.component';
 
