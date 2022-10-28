@@ -1,0 +1,6 @@
+import { <%= classify(name) %>Directive } from './<%= dasherize(name) %>.directive';
+
+test('can be constructed', () => {
+  const directive = new <%= classify(name) %>Directive();
+  expect(directive).toBeTruthy();
+});

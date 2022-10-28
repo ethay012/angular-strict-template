@@ -1,0 +1,9 @@
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/angular';
+import { <%= classify(name) %>Component } from './<%= dasherize(name) %>.component';
+
+test('shows message <%= dasherize(name) %> works!', async () => {
+  await render(<%= classify(name) %>Component);
+  const message = screen.getByText('<%= dasherize(name) %> works!');
+  expect(message).toBeInTheDocument();
+});

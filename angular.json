@@ -6,11 +6,7 @@
     "angular-strict-template": {
       "projectType": "application",
       "schematics": {
-        "@ngneat/aim:component": {
-          "style": "scss",
-          "changeDetection": "OnPush"
-        },
-        "@schematics/angular:component": {
+        "angular-strict-schematics:component": {
           "style": "scss",
           "changeDetection": "OnPush"
         }
@@ -105,7 +101,7 @@
   },
   "cli": {
     "schematicCollections": [
-      "@ngneat/aim",
+      "angular-strict-schematics",
       "@angular-eslint/schematics"
     ]
   }

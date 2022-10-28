@@ -9,7 +9,8 @@
     "test": "jest",
     "prepare": "husky install",
     "lint": "npx eslint 'src/**/*.{js,ts,html}' --quiet --fix",
-    "format": "npx prettier 'src/**/*.{js,ts,html}' --write"
+    "format": "npx prettier 'src/**/*.{js,ts,html}' --write",
+    "build-schematics": "tsc -p ./schematics/tsconfig.json"
   },
   "jest": {
     "preset": "jest-preset-angular",

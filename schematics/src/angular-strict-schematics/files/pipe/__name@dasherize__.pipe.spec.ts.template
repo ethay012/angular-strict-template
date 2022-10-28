@@ -1,0 +1,6 @@
+import { <%= classify(name) %>Pipe } from './<%= dasherize(name) %>.pipe';
+
+test('can be constructed', () => {
+  const pipe = new <%= classify(name) %>Pipe();
+  expect(pipe).toBeTruthy();
+});

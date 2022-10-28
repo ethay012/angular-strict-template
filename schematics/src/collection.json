@@ -1,0 +1,30 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "extends": "@ngneat/aim",
+  "schematics": {
+    "component": {
+      "description": "Create an inline Angular component",
+      "factory": "./angular-strict-schematics/index#component",
+      "aliases": [
+        "c"
+      ],
+      "schema": "../node_modules/@schematics/angular/component/schema.json"
+    },
+    "directive": {
+      "description": "Create an inline Angular directive",
+      "factory": "./angular-strict-schematics/index#directive",
+      "aliases": [
+        "d"
+      ],
+      "schema": "../node_modules/@schematics/angular/directive/schema.json"
+    },
+    "pipe": {
+      "description": "Create an inline Angular pipe",
+      "factory": "./angular-strict-schematics/index#pipe",
+      "aliases": [
+        "p"
+      ],
+      "schema": "../node_modules/@schematics/angular/pipe/schema.json"
+    }
+  }
+}
