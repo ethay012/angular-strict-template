@@ -10,7 +10,8 @@
     "prepare": "husky install",
     "lint": "npx eslint 'src/**/*.{js,ts,html}' --quiet --fix",
     "format": "npx prettier 'src/**/*.{js,ts,html}' --write",
-    "build-schematics": "tsc -p ./schematics/tsconfig.json"
+    "build-schematics": "tsc -p ./schematics/tsconfig.json",
+    "generate-icons": "svg-generator"
   },
   "jest": {
     "preset": "jest-preset-angular",
@@ -28,6 +29,7 @@
     "@angular/platform-browser": "^14.2.6",
     "@angular/platform-browser-dynamic": "^14.2.6",
     "@angular/router": "^14.2.6",
+    "@ngneat/svg-icon": "^4.1.4",
     "primeflex": "^3.2.1",
     "primeicons": "^6.0.1",
     "primeng": "^14.1.2",
@@ -73,6 +75,18 @@
     "stylelint-config-idiomatic-order": "^9.0.0",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^5.0.0",
-    "typescript": "~4.8.4"
+    "typescript": "~4.8.4",
+    "@ngneat/svg-generator": "^4.0.0"
+  },
+  "svgGenerator": {
+    "outputPath": "./src/app/svg",
+    "prefix": "app",
+    "srcPath": "./src/assets/svg",
+    "svgoConfig": {
+      "plugins": [
+        "removeDimensions",
+        "cleanupAttrs"
+      ]
+    }
   }
 }
